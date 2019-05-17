@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="15dp">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:boxedEdges="all">
+
+        <TextView
+            android:id="@+id/mainText"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:text="kaldhf ahudifb dsulbdjvab dbavbas dbvaöds"
+            android:textColor="@color/light_grey"
+            android:textSize="20dp" />
+        
+         <Button
+                android:id="@+id/YesButton"
+                android:text="?"
+                android:background="@color/white"
+                android:layout_gravity="right|center"
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:gravity="center"
+                android:textColor="#ff000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+			<Button
+				android:id="@+id/YesButton"
+				android:text="ja"
+				android:background="@color/red"
+				android:layout_gravity="right|bottom"
+				android:layout_height="60dp"
+				android:layout_weight="0.5"
+				android:gravity="center"
+				android:textColor="#ff000000"
+				android:textSize="20dp"
+                android:textStyle="bold"/>
+
+        	<Button
+        		android:id="@+id/NoButton"
+       			android:text="nein"
+       			android:background="#ff206abe"
+       			android:layout_gravity="left|bottom"
+       			android:layout_height="60dp"
+       			android:layout_weight="0.5"
+       			android:gravity="center"
+       			android:textColor="#ff000000"
+       			android:textSize="20dp"
+                android:textStyle="bold" />
+                    
+        </LinearLayout>
+    
+    </FrameLayout>
+</android.support.wear.widget.BoxInsetLayout>
+
+
+
+<!-- 
+
+
+Linear Layout:
+https://stackoverflow.com/questions/2581481/assign-width-to-half-available-screen-width-declaratively
+
+
+
+
+
+
+-->
