@@ -19,8 +19,11 @@ namespace FirstAid
 
     public class MainActivity : WearableActivity
     {
-        TextView textView;
+        TextView textView; //Was ist das ?
 
+        Book book = new Book; //new, da Standardkonstruktor automatisch aufgerufen wird
+
+        //Anwendung wird gestartet
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -33,6 +36,8 @@ namespace FirstAid
 
             SetAmbientEnabled();  //Sparmodus?
         }
+
+
     }
 }
 

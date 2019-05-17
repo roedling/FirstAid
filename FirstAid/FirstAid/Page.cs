@@ -11,7 +11,7 @@ public enum PageTypeEnum { query, confirmation }
     public class Page
     {
         public string text { get; set; }
-        public string hilfetext { get; set; }
+        public string helpText { get; set; }
         public PageTypeEnum pageType { get; set; }
         public int nextIfYes { get; set; }
         public int nextIfNo { get; set; }
