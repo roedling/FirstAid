@@ -11,7 +11,7 @@
         android:padding      ="5dp"
         app:boxedEdges       ="all">
         <TextView
-            android:id           ="@+id/ConfirmationText"
+            android:id           ="@+id/mainText"
             android:gravity      ="center"
             android:paddingTop   ="10dp"
             android:layout_height="wrap_content"
@@ -19,36 +19,14 @@
             android:text         ="@string/app_name"
             android:textColor    ="@color/light_grey" />
         <Button
-            android:id            ="@+id/ConfirmationButton"
-            android:text          ="Bestätigen"
+            android:id            ="@+id/BackButton"
+            android:text          ="Zurück"
             android:background    ="#ff206abe"
             android:layout_gravity="bottom|center"
-            android:layout_height ="50dp"
+            android:layout_height ="30dp"
             android:layout_width  ="match_parent"
             android:gravity       ="center"
             android:textColor     ="@color/black"
             android:textStyle     ="bold" />
-        <Button
-            android:id            ="@+id/ConfirmationQuestionButton"
-            android:text          ="S"
-            android:background    ="@color/white"
-            android:layout_gravity="right|center"
-            android:layout_height ="20dp"
-            android:layout_width  ="20dp"
-            android:gravity       ="center"
-            android:textColor     ="#ff000000"
-            android:textSize      ="15dp"
-            android:textStyle     ="bold" />
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
-<!-- 
-
-android.support.wear.widget.BoxInsetLayout:
-https://developer.android.com/reference/android/support/wear/widget/BoxInsetLayout
-
-Define layouts on Wear:
-https://developer.android.com/training/wearables/ui/layouts
-
-
-
--->

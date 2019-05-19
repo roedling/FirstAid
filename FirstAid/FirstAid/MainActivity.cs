@@ -19,24 +19,91 @@ namespace FirstAid
 
     public class MainActivity : WearableActivity
     {
-        TextView textView; //Was ist das ?
-
-        Book book = new Book; //new, da Standardkonstruktor automatisch aufgerufen wird
+        
+        private int currentViewId = -1; //Aktuelle Id unseres Layouts. Setzen auf -1, da die Id der Layouts meist eine positive Zahl ist (vielleicht auch 0) -> nicht existierendes Layout
+        Book book = new Book(); //new, da Standardkonstruktor automatisch aufgerufen wird
 
         //Anwendung wird gestartet
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState); //Startinfo an Basisklasse (MainActivity)
 
-            SetContentView(Resource.Layout.activity_main);
-
-            textView = FindViewById<TextView>(Resource.Id.text);
-
-            // textView.Text = "Hans";
+            SetContentViewToConfirmation();
 
             SetAmbientEnabled();  //Sparmodus?
         }
 
+
+        private void SetContentViewToConfirmation()
+        {
+            if (currentViewId != Resource.Layout.layout_confirmation) //Resource.Layout.layout_confirmation liefert die Id des Layouts
+            {
+                currentViewId = Resource.Layout.layout_confirmation;
+                SetContentView(Resource.Layout.layout_confirmation); //Methode SetContentView bildet das gewünschte Layout auf dem Bildschirm ab
+
+                FindViewById<Button>(Resource.Id.ConfirmationButton).Click += ClickedConfirmation; //übergebe referenz. Pointer auf Mehtode wird dazu gepackt. Button führt Liste. Button kann mehrere Methoden aufrufen. = wäre das ersetzen der Click Methode
+            }
+        }
+
+        //private void SetContentViewToQuery()
+        //{
+        //    if (currentViewId != Resource.Layout.layout_query)
+        //    {
+        //        currentViewId = Resource.Layout.layout_query;
+        //        SetContentView(Resource.Layout.layout_query);
+
+        //        FindViewById<Button>(Resource.Id.YesButton).Click += ClickedYes;
+        //        FindViewById<Button>(Resource.Id.NoButton).Click += ClickedNo;
+
+        //    }
+        //}
+
+        //private void SetContentViewToBack()
+        //{
+        //    if (currentViewId != Resource.Layout.layout_back)
+        //    {
+        //        currentViewId = Resource.Layout.layout_back;
+        //        SetContentView(Resource.Layout.layout_back);
+
+        //        FindViewById<Button>(Resource.Id.BackButton).Click += ClickedBack;
+
+        //    }
+        //}
+        //private void SetContentViewToEnd()
+        //{
+        //    if (currentViewId != Resource.Layout.layout_end)
+        //    {
+        //        currentViewId = Resource.Layout.layout_end;
+        //        SetContentView(Resource.Layout.layout_end);
+        //
+        //        FindViewById<Button>(Resource.Id.BackToStartButton).Click += ClickedBackToStart;
+
+        //    }
+        //}
+
+        void ClickedConfirmation(object Button, EventArgs a)
+        {
+            ShowPage(book.GetNextPage(AnswerTypeEnum.Confirmation));
+        }
+
+
+        void ShowPage(Page page)
+        {
+            if(page.pageType == PageTypeEnum.confirmation)
+            {
+                SetContentViewToConfirmation();
+                FindViewById<TextView>(Resource.Id.ConfirmationText).Text = page.text;
+            }
+
+            //else if()
+            //{ }
+
+            //else if()
+            //{ }
+
+            else
+            { }
+        }
 
     }
 }

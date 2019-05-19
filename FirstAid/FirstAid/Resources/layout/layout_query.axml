@@ -21,8 +21,8 @@
             android:textColor="@color/light_grey"
             android:textSize="20dp" />
         <Button
-            android:id="@+id/YesButton"
-            android:text="?"
+            android:id="@+id/QueryQuestionButton"
+            android:text="S"
             android:background="@color/white"
             android:layout_gravity="right|center"
             android:layout_height="20dp"
@@ -62,7 +62,7 @@
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
 <!-- 
-
+Statt ? -> S
 
 Linear Layout:
 https://stackoverflow.com/questions/2581481/assign-width-to-half-available-screen-width-declaratively

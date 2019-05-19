@@ -5,14 +5,16 @@ using System.Collections.Generic; //https://docs.microsoft.com/en-us/dotnet/api/
 
 namespace FirstAid
 {
+    public enum AnswerTypeEnum { Yes, No, Confirmation } //nur in der Klasse oder auch Main?
+
     public class Book
     {
         private List<Page> pages; //Liste von Seiten. Privat, da nur innerhalb der Klasse auf die Liste zugegriffen werden muss.
-
+        private int currentPage = 0;
 
         public Book() //Konstruktor
         {
-            pages = new List<Page>; //dynamische Erzeugung der Liste.
+            pages = new List<Page>(); //dynamische Erzeugung der Liste.
 
             //Seite 0 (Eigenschutz)
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Achtung Eigenschutz!", helpText = "scharfe Gegenstände", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 1 });
@@ -77,7 +79,28 @@ namespace FirstAid
         }
 
 
+        public Page GetNextPage(AnswerTypeEnum answer)
+        {
+            int nextPage;
 
+            if( answer == AnswerTypeEnum.Yes)
+            {
+                nextPage = pages[currentPage].nextIfYes;
+            }
+
+            else if( answer == AnswerTypeEnum.No)
+            {
+                nextPage = pages[currentPage].nextIfNo;
+            }
+
+            else
+            {
+                nextPage = pages[currentPage].nextIfConfirm;
+            }
+
+            currentPage = nextPage;
+            return (pages[nextPage]);
+        }
 
 
 
