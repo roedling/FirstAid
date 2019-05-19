@@ -28,7 +28,7 @@ namespace FirstAid
         {
             base.OnCreate(savedInstanceState); //Startinfo an Basisklasse (MainActivity)
 
-            SetContentViewToConfirmation();
+            ShowPage(book.GetCurrentPage());
 
             SetAmbientEnabled();  //Sparmodus?
         }
@@ -45,18 +45,18 @@ namespace FirstAid
             }
         }
 
-        //private void SetContentViewToQuery()
-        //{
-        //    if (currentViewId != Resource.Layout.layout_query)
-        //    {
-        //        currentViewId = Resource.Layout.layout_query;
-        //        SetContentView(Resource.Layout.layout_query);
+        private void SetContentViewToQuery()
+        {
+            if (currentViewId != Resource.Layout.layout_query)
+            {
+                currentViewId = Resource.Layout.layout_query;
+                SetContentView(Resource.Layout.layout_query);
 
-        //        FindViewById<Button>(Resource.Id.YesButton).Click += ClickedYes;
-        //        FindViewById<Button>(Resource.Id.NoButton).Click += ClickedNo;
+                FindViewById<Button>(Resource.Id.YesButton).Click += ClickedYes;
+                FindViewById<Button>(Resource.Id.NoButton).Click += ClickedNo;
 
-        //    }
-        //}
+            }
+        }
 
         //private void SetContentViewToBack()
         //{
@@ -86,17 +86,30 @@ namespace FirstAid
             ShowPage(book.GetNextPage(AnswerTypeEnum.Confirmation));
         }
 
+        void ClickedYes(object Button, EventArgs a)
+        {
+            ShowPage(book.GetNextPage(AnswerTypeEnum.Yes));
+        }
+
+        void ClickedNo(object Button, EventArgs a)
+        {
+            ShowPage(book.GetNextPage(AnswerTypeEnum.No));
+        }
+
 
         void ShowPage(Page page)
         {
             if(page.pageType == PageTypeEnum.confirmation)
             {
                 SetContentViewToConfirmation();
-                FindViewById<TextView>(Resource.Id.ConfirmationText).Text = page.text;
+                FindViewById<TextView>(Resource.Id.confirmationText).Text = page.text;
             }
 
-            //else if()
-            //{ }
+            else if(page.pageType == PageTypeEnum.query)
+            {
+                SetContentViewToQuery();
+                FindViewById<TextView>(Resource.Id.queryText).Text = page.text;
+            }
 
             //else if()
             //{ }

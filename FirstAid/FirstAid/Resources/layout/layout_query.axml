@@ -4,22 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="@color/green">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
-        app:boxedEdges="all">
-        <TextView
-            android:id="@+id/mainText"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_weight="0.5"
-            android:text="kaldhf ahudifb dsulbdjvab dbavbas dbvaöds"
-            android:textColor="@color/light_grey"
-            android:textSize="20dp" />
+        android:padding="0dp"
+        android:background="@color/red">
+		<TextView
+			android:id="@+id/queryText"
+			android:gravity="center"
+			android:paddingTop="10dp"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_weight="0.5"
+			android:text="..."
+			android:textColor="@color/black"
+			android:textSize="25dp" />
         <Button
             android:id="@+id/QueryQuestionButton"
             android:text="S"
@@ -39,9 +40,10 @@
             <Button
                 android:id="@+id/YesButton"
                 android:text="ja"
-                android:background="@color/red"
+                android:background="#ff206abe"
                 android:layout_gravity="right|bottom"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
+                android:layout_width ="match_parent"
                 android:layout_weight="0.5"
                 android:gravity="center"
                 android:textColor="#ff000000"
@@ -52,7 +54,8 @@
                 android:text="nein"
                 android:background="#ff206abe"
                 android:layout_gravity="left|bottom"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
+                android:layout_width ="match_parent"
                 android:layout_weight="0.5"
                 android:gravity="center"
                 android:textColor="#ff000000"

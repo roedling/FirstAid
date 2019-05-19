@@ -68,7 +68,7 @@ namespace FirstAid
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Frag Opfer: Wie heißen Sie?", helpText = "Opfer durch Kommunikation beruhigen", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 17 });
 
             //Seite 17 (Reaktion)
-            pages.Add(new Page() { pageType = PageTypeEnum.query, text = "Kurze Reaktionszeit & logische Antwort?", helpText = "Antwortet das Opfer nach kurzer Zeit und ist die Antwort logisch?", nextIfYes = 18, nextIfNo = 20, nextIfConfirm = 0 });
+            pages.Add(new Page() { pageType = PageTypeEnum.query, text = "Kurze Reaktionszeit & logische Antwort?", helpText = "Antwortet das Opfer nach kurzer Zeit und ist die Antwort logisch?", nextIfYes = 18, nextIfNo = 8, nextIfConfirm = 0 });
 
             //Seite 18 (Kommunikation 2)
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Frag Opfer: Haben Sie Schmerzen?", helpText = "Opfer nach möglichen (unsichtbaren) Verletzungen fragen", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 19 });
@@ -102,7 +102,10 @@ namespace FirstAid
             return (pages[nextPage]);
         }
 
-
+        public Page GetCurrentPage()
+        {
+            return pages[currentPage];
+        }
 
 
     }
