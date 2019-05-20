@@ -21,6 +21,8 @@ namespace FirstAid
     {
         
         private int currentViewId = -1; //Aktuelle Id unseres Layouts. Setzen auf -1, da die Id der Layouts meist eine positive Zahl ist (vielleicht auch 0) -> nicht existierendes Layout
+        private Page currentPage;
+
         Book book = new Book(); //new, da Standardkonstruktor automatisch aufgerufen wird
 
         //Anwendung wird gestartet
@@ -42,6 +44,7 @@ namespace FirstAid
                 SetContentView(Resource.Layout.layout_confirmation); //Methode SetContentView bildet das gewünschte Layout auf dem Bildschirm ab
 
                 FindViewById<Button>(Resource.Id.ConfirmationButton).Click += ClickedConfirmation; //übergebe referenz. Pointer auf Mehtode wird dazu gepackt. Button führt Liste. Button kann mehrere Methoden aufrufen. = wäre das ersetzen der Click Methode
+                FindViewById<Button>(Resource.Id.ConfirmationQuestionButton).Click += ClickedHelp;
             }
         }
 
@@ -54,18 +57,10 @@ namespace FirstAid
 
                 FindViewById<Button>(Resource.Id.YesButton).Click += ClickedYes;
                 FindViewById<Button>(Resource.Id.NoButton).Click += ClickedNo;
+                FindViewById<Button>(Resource.Id.QueryQuestionButton).Click += ClickedHelp;
 
             }
         }
-
-        //private void SetContentViewToBack()
-        //{
-        //    if (currentViewId != Resource.Layout.layout_back)
-        //    {
-        //        currentViewId = Resource.Layout.layout_back;
-        //        SetContentView(Resource.Layout.layout_back);
-
-        //        FindViewById<Button>(Resource.Id.BackButton).Click += ClickedBack;
 
         //    }
         //}
@@ -81,6 +76,17 @@ namespace FirstAid
         //    }
         //}
 
+        private void SetContentViewToHelp()
+        {
+            if (currentViewId != Resource.Layout.layout_back)
+            {
+                currentViewId = Resource.Layout.layout_back;
+                SetContentView(Resource.Layout.layout_back);
+
+                FindViewById<Button>(Resource.Id.BackButton).Click += ClickedBack;
+            }
+        }
+
         void ClickedConfirmation(object Button, EventArgs a)
         {
             ShowPage(book.GetNextPage(AnswerTypeEnum.Confirmation));
@@ -95,6 +101,19 @@ namespace FirstAid
         {
             ShowPage(book.GetNextPage(AnswerTypeEnum.No));
         }
+
+        void ClickedHelp(object Button, EventArgs a)
+        {
+            currentPage = book.GetCurrentPage();
+            SetContentViewToHelp();
+            FindViewById<TextView>(Resource.Id.HelpText).Text = currentPage.helpText;
+        }
+
+        void ClickedBack(object Button, EventArgs a)
+        {
+            ShowPage(book.GetCurrentPage());
+        }
+
 
 
         void ShowPage(Page page)

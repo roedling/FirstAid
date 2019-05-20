@@ -5,32 +5,32 @@
     android:layout_height="match_parent"
     android:layout_width ="match_parent"
     android:padding      ="15dp"
-    android:background="@color/green">
+    android:background   ="@color/green">
     <FrameLayout
         android:layout_width ="match_parent"
         android:layout_height="match_parent"
         android:padding      ="0dp"
-        android:background="@color/red">
-		<TextView
-			android:id           ="@+id/confirmationText"
-			android:gravity      ="center"
-			android:paddingTop   ="10dp"
-			android:layout_height="wrap_content"
-			android:layout_width ="match_parent"
-			android:text         ="Erste-Hilfe starten"
-			android:textColor    ="@color/black"
-			android:textSize="25dp" />
-		<Button
-			android:id            ="@+id/ConfirmationButton"
-			android:text          ="Bestätigen"
-			android:background    ="#ff206abe"
-			android:layout_gravity="bottom|center"
-			android:layout_height ="50dp"
-			android:layout_width  ="match_parent"
-			android:gravity       ="center"
-			android:textColor     ="@color/black"
-			android:textStyle     ="bold"
-			android:textSize="20dp" />
+        android:background   ="@color/red">
+        <TextView
+            android:id           ="@+id/confirmationText"
+            android:gravity      ="center"
+            android:paddingTop   ="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width ="match_parent"
+            android:text         ="Erste-Hilfe starten"
+            android:textColor    ="@color/black"
+            android:textSize     ="25dp" />
+        <Button
+            android:id            ="@+id/ConfirmationButton"
+            android:text          ="Bestätigen"
+            android:background    ="#ff206abe"
+            android:layout_gravity="bottom|center"
+            android:layout_height ="50dp"
+            android:layout_width  ="match_parent"
+            android:gravity       ="center"
+            android:textColor     ="@color/black"
+            android:textStyle     ="bold"
+            android:textSize      ="20dp" />
         <Button
             android:id            ="@+id/ConfirmationQuestionButton"
             android:text          ="S"
