@@ -1453,20 +1453,20 @@ namespace FirstAid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0d0039
-			public const int BackButton = 2131558457;
-			
 			// aapt resource value: 0x7f0d003e
-			public const int BackToStartButton = 2131558462;
-			
-			// aapt resource value: 0x7f0d003b
-			public const int ConfirmationButton = 2131558459;
+			public const int BackButton = 2131558462;
 			
 			// aapt resource value: 0x7f0d003c
-			public const int ConfirmationQuestionButton = 2131558460;
+			public const int BackToStartButton = 2131558460;
 			
-			// aapt resource value: 0x7f0d0038
-			public const int HelpText = 2131558456;
+			// aapt resource value: 0x7f0d0039
+			public const int ConfirmationButton = 2131558457;
+			
+			// aapt resource value: 0x7f0d003a
+			public const int ConfirmationQuestionButton = 2131558458;
+			
+			// aapt resource value: 0x7f0d003d
+			public const int HelpText = 2131558461;
 			
 			// aapt resource value: 0x7f0d0042
 			public const int NoButton = 2131558466;
@@ -1543,8 +1543,8 @@ namespace FirstAid
 			// aapt resource value: 0x7f0d0035
 			public const int configView = 2131558453;
 			
-			// aapt resource value: 0x7f0d003a
-			public const int confirmationText = 2131558458;
+			// aapt resource value: 0x7f0d0038
+			public const int confirmationText = 2131558456;
 			
 			// aapt resource value: 0x7f0d0017
 			public const int dashed = 2131558423;
@@ -1603,8 +1603,8 @@ namespace FirstAid
 			// aapt resource value: 0x7f0d0005
 			public const int line3 = 2131558405;
 			
-			// aapt resource value: 0x7f0d003d
-			public const int mainText = 2131558461;
+			// aapt resource value: 0x7f0d003b
+			public const int mainText = 2131558459;
 			
 			// aapt resource value: 0x7f0d004c
 			public const int media_actions = 2131558476;
@@ -1925,13 +1925,13 @@ namespace FirstAid
 			public const int dismiss_overlay = 2130968582;
 			
 			// aapt resource value: 0x7f040007
-			public const int layout_back = 2130968583;
+			public const int layout_confirmation = 2130968583;
 			
 			// aapt resource value: 0x7f040008
-			public const int layout_confirmation = 2130968584;
+			public const int layout_end = 2130968584;
 			
 			// aapt resource value: 0x7f040009
-			public const int layout_end = 2130968585;
+			public const int layout_help = 2130968585;
 			
 			// aapt resource value: 0x7f04000a
 			public const int layout_query = 2130968586;

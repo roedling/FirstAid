@@ -63,9 +63,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\layout\layout_confirmation.axml" />
-    <AndroidResource Include="Resources\layout\layout_query.axml" />
     <AndroidResource Include="Resources\layout\layout_end.axml" />
-    <AndroidResource Include="Resources\layout\layout_back.axml" />
+    <AndroidResource Include="Resources\layout\layout_help.axml" />
+    <AndroidResource Include="Resources\layout\layout_query.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />

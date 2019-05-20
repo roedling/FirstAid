@@ -78,10 +78,10 @@ namespace FirstAid
 
         private void SetContentViewToHelp()
         {
-            if (currentViewId != Resource.Layout.layout_back)
+            if (currentViewId != Resource.Layout.layout_help)
             {
-                currentViewId = Resource.Layout.layout_back;
-                SetContentView(Resource.Layout.layout_back);
+                currentViewId = Resource.Layout.layout_help;
+                SetContentView(Resource.Layout.layout_help);
 
                 FindViewById<Button>(Resource.Id.BackButton).Click += ClickedBack;
             }
@@ -139,5 +139,6 @@ namespace FirstAid
 
     }
 }
+
 
 
