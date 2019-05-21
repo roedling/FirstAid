@@ -44,7 +44,7 @@ namespace FirstAid
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Für Wohlbefinden sorgen (Decke, Sonnenschutz)", helpText = "Dafür sorge leisten, dass das Opfer nicht friert oder sich einen Sonnenstich zuzieht", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 9 });
 
             //Seite 9 (Warten(Notruf))
-            pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Warten! Regelmäßige Pulskontrolle", helpText = "Pulskontrolle beispielsweise am Handgelenk", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 0 });
+            pages.Add(new Page() { pageType = PageTypeEnum.end, text = "Warten! Regelmäßige Pulskontrolle", helpText = "Pulskontrolle beispielsweise am Handgelenk", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 0 });
 
             //Seite 10 (Kopf überstrecken)
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Kopf des Opfers überstrecken", helpText = "Kopf soweit überstrecken, sodass Zunge nicht die Atmenwege versperrt", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 11 });
@@ -105,6 +105,11 @@ namespace FirstAid
         public Page GetCurrentPage()
         {
             return pages[currentPage];
+        }
+
+        public void Reset()
+        {
+            currentPage = 0;
         }
 
 

@@ -62,19 +62,17 @@ namespace FirstAid
             }
         }
 
-        //    }
-        //}
-        //private void SetContentViewToEnd()
-        //{
-        //    if (currentViewId != Resource.Layout.layout_end)
-        //    {
-        //        currentViewId = Resource.Layout.layout_end;
-        //        SetContentView(Resource.Layout.layout_end);
-        //
-        //        FindViewById<Button>(Resource.Id.BackToStartButton).Click += ClickedBackToStart;
+        private void SetContentViewToEnd()
+        {
+            if (currentViewId != Resource.Layout.layout_end)
+            {
+                currentViewId = Resource.Layout.layout_end;
+                SetContentView(Resource.Layout.layout_end);
 
-        //    }
-        //}
+                FindViewById<Button>(Resource.Id.BackToStartButton).Click += ClickedBackToStart; 
+
+            }
+        }
 
         private void SetContentViewToHelp()
         {
@@ -87,7 +85,7 @@ namespace FirstAid
             }
         }
 
-        void ClickedConfirmation(object Button, EventArgs a)
+        void ClickedConfirmation(object Button, EventArgs a) //Callback Methode braucht die Argumente object und EventArgs
         {
             ShowPage(book.GetNextPage(AnswerTypeEnum.Confirmation));
         }
@@ -104,14 +102,21 @@ namespace FirstAid
 
         void ClickedHelp(object Button, EventArgs a)
         {
-            currentPage = book.GetCurrentPage();
-            SetContentViewToHelp();
-            FindViewById<TextView>(Resource.Id.HelpText).Text = currentPage.helpText;
+            currentPage = book.GetCurrentPage(); //Aktuelle Abfrageseite speichern
+            SetContentViewToHelp(); //Bildschirm auf das Layout für den Hilfetext stellen
+            FindViewById<TextView>(Resource.Id.HelpText).Text = currentPage.helpText; //Hilfetext der aktuellen Seite aufrufen
         }
 
         void ClickedBack(object Button, EventArgs a)
         {
-            ShowPage(book.GetCurrentPage());
+            ShowPage(book.GetCurrentPage()); //Zurück auf die aktuelle Seite
+        }
+
+        void ClickedBackToStart(object Button, EventArgs a)
+        {
+            SetContentViewToConfirmation(); //Da erste Seite Confirmation, Bildschirmlayout auf Confirmation setzen
+            book.Reset(); //Buchseite auf 0 setzen
+            ShowPage(book.GetCurrentPage()); //Methode ShowPage mit der 1 Seite (in diesem Fall die "0") aufrufen
         }
 
 
@@ -130,8 +135,11 @@ namespace FirstAid
                 FindViewById<TextView>(Resource.Id.queryText).Text = page.text;
             }
 
-            //else if()
-            //{ }
+            else if (page.pageType == PageTypeEnum.end)
+            {
+                SetContentViewToEnd();
+                FindViewById<TextView>(Resource.Id.queryText).Text = page.text;
+            }
 
             else
             { }
