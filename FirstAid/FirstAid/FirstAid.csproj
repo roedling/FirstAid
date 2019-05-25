@@ -66,6 +66,7 @@
     <AndroidResource Include="Resources\layout\layout_end.axml" />
     <AndroidResource Include="Resources\layout\layout_help.axml" />
     <AndroidResource Include="Resources\layout\layout_query.axml" />
+    <AndroidResource Include="Resources\raw\stayinalive.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
@@ -87,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Wear" Version="28.0.0.1" />

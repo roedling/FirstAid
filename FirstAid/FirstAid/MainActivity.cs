@@ -12,6 +12,7 @@ using Android.Support.V4.View;
 using Android.Support.Wearable.Activity;
 using Java.Interop;
 using Android.Views.Animations;
+using Android.Media;
 
 namespace FirstAid
 {
@@ -23,6 +24,8 @@ namespace FirstAid
         private int currentViewId = -1; //Aktuelle Id unseres Layouts. Setzen auf -1, da die Id der Layouts meist eine positive Zahl ist (vielleicht auch 0) -> nicht existierendes Layout
         private Page currentPage;
 
+        MediaPlayer MediaPlayer;
+
         Book book = new Book(); //new, da Standardkonstruktor automatisch aufgerufen wird
 
         //Anwendung wird gestartet
@@ -31,6 +34,11 @@ namespace FirstAid
             base.OnCreate(savedInstanceState); //Startinfo an Basisklasse (MainActivity)
 
             ShowPage(book.GetCurrentPage());
+
+            // Load mp3
+            MediaPlayer = MediaPlayer.Create(this, Resource.Raw.stayinalive);
+            // Play mp3
+            MediaPlayer.Start();
 
             SetAmbientEnabled();  //Sparmodus?
         }
