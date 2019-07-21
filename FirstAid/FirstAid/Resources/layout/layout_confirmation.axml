@@ -4,13 +4,11 @@
     xmlns:app            ="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width ="match_parent"
-    android:padding      ="15dp"
-    android:background   ="@color/green">
+    android:padding      ="15dp" >
     <FrameLayout
         android:layout_width ="match_parent"
         android:layout_height="match_parent"
-        android:padding      ="0dp"
-        android:background   ="@color/red">
+        android:padding      ="0dp">
         <TextView
             android:id           ="@+id/confirmationText"
             android:gravity      ="center"
@@ -18,8 +16,9 @@
             android:layout_height="wrap_content"
             android:layout_width ="match_parent"
             android:text         ="Erste-Hilfe starten"
-            android:textColor    ="@color/black"
-            android:textSize     ="25dp" />
+            android:textColor    ="@color/white"
+            android:textSize     ="25dp"
+            android:clickable="true"/>
         <Button
             android:id            ="@+id/ConfirmationButton"
             android:text          ="Bestätigen"
@@ -28,20 +27,9 @@
             android:layout_height ="50dp"
             android:layout_width  ="match_parent"
             android:gravity       ="center"
-            android:textColor     ="@color/black"
+            android:textColor     ="@color/white"
             android:textStyle     ="bold"
             android:textSize      ="20dp" />
-        <Button
-            android:id            ="@+id/ConfirmationQuestionButton"
-            android:text          ="S"
-            android:background    ="@color/white"
-            android:layout_gravity="right|center"
-            android:layout_height ="20dp"
-            android:layout_width  ="20dp"
-            android:gravity       ="center"
-            android:textColor     ="#ff000000"
-            android:textSize      ="15dp"
-            android:textStyle     ="bold" />
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
 <!-- 

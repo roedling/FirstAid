@@ -4,31 +4,46 @@
     xmlns:app            ="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width ="match_parent"
-    android:padding      ="15dp"
-    android:background   ="@color/green">
+    android:paddingTop   ="25dp"
+    android:paddingLeft  ="25dp"
+    android:paddingRight ="25dp"
+    android:paddingBottom="15dp">
     <FrameLayout
         android:layout_width ="match_parent"
         android:layout_height="match_parent"
-        android:padding      ="0dp"
-        android:background   ="@color/red">
-        <TextView
-            android:id           ="@+id/HelpText"
-            android:gravity      ="center"
-            android:paddingTop   ="10dp"
-            android:layout_height="wrap_content"
+        android:padding      ="0dp">
+        <LinearLayout
             android:layout_width ="match_parent"
-            android:text         ="@string/app_name"
-            android:textColor    ="@color/black"
-            android:textSize     ="20dp" />
-        <Button
-            android:id            ="@+id/BackButton"
-            android:text          ="Zurück"
-            android:background    ="#ff206abe"
-            android:layout_gravity="bottom|center"
-            android:layout_height ="30dp"
-            android:layout_width  ="match_parent"
-            android:gravity       ="center"
-            android:textColor     ="@color/black"
-            android:textStyle     ="bold" />
+            android:layout_height="match_parent"
+            android:orientation  ="vertical"
+            android:weightSum    ="1">
+            <ScrollView
+                android:id            ="@+id/SCROLLER_ID"
+                android:layout_width  ="match_parent"
+                android:layout_height ="match_parent"
+                android:scrollbars    ="vertical"
+                android:layout_weight ="1"
+                android:layout_gravity="top"
+                android:scrollbarStyle="insideOverlay">
+                <TextView
+                    android:id           ="@+id/HelpText"
+                    android:layout_height="match_parent"
+                    android:layout_width ="match_parent"
+                    android:text         ="hilfe"
+                    android:textColor    ="@color/white"
+                    android:textSize     ="20dp"
+                    android:clickable    ="true" />
+            </ScrollView>
+            <Button
+                android:id            ="@+id/BackButton"
+                android:text          ="Zurück"
+                android:background    ="#ff206abe"
+                android:layout_height ="50dp"
+                android:layout_width  ="match_parent"
+                android:textColor     ="@color/white"
+                android:textSize      ="20dp"
+                android:textStyle     ="bold"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>

@@ -17,7 +17,7 @@ namespace FirstAid
             pages = new List<Page>(); //dynamische Erzeugung der Liste.
 
             //Seite 0 (Eigenschutz)
-            pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Achtung Eigenschutz!", helpText = "scharfe Gegenstände", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 1 });
+            pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Achtung Eigenschutz!", helpText = "scharfe Gegenstände, dasu dauhduv ad adncja asdjcdja ssajdbjas hjsahdj csncajsd jdhas dcjvasdufh dnjc njduas dcjdsbj djfaudh asd", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 1 });
 
             //Seite 1 (Abichern)
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Unfallstelle absichern!", helpText = "Warndreieck", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 2 });
@@ -41,7 +41,7 @@ namespace FirstAid
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Stabile Seitenlage", helpText = "...", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 8 }); 
 
             //Seite 8 (Wohlbefinden)
-            pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Für Wohlbefinden sorgen (Decke, Sonnenschutz)", helpText = "Dafür sorge leisten, dass das Opfer nicht friert oder sich einen Sonnenstich zuzieht", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 9 });
+            pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Für Wohlbefinden sorgen (Decke&Sonnenschutz)", helpText = "Dafür sorge leisten, dass das Opfer nicht friert oder sich einen Sonnenstich zuzieht", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 9 });
 
             //Seite 9 (Warten(Notruf))
             pages.Add(new Page() { pageType = PageTypeEnum.end, text = "Warten! Regelmäßige Pulskontrolle", helpText = "Pulskontrolle beispielsweise am Handgelenk", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 0 });
@@ -68,7 +68,7 @@ namespace FirstAid
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Frag Opfer: Wie heißen Sie?", helpText = "Opfer durch Kommunikation beruhigen", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 17 });
 
             //Seite 17 (Reaktion)
-            pages.Add(new Page() { pageType = PageTypeEnum.query, text = "Kurze Reaktionszeit & logische Antwort?", helpText = "Antwortet das Opfer nach kurzer Zeit und ist die Antwort logisch?", nextIfYes = 18, nextIfNo = 8, nextIfConfirm = 0 });
+            pages.Add(new Page() { pageType = PageTypeEnum.query, text = " Kurze Reaktionszeit & logische Antwort?", helpText = "Antwortet das Opfer nach kurzer Zeit und ist die Antwort logisch?", nextIfYes = 18, nextIfNo = 8, nextIfConfirm = 0 });
 
             //Seite 18 (Kommunikation 2)
             pages.Add(new Page() { pageType = PageTypeEnum.confirmation, text = "Frag Opfer: Haben Sie Schmerzen?", helpText = "Opfer nach möglichen (unsichtbaren) Verletzungen fragen", nextIfYes = 0, nextIfNo = 0, nextIfConfirm = 19 });

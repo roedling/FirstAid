@@ -43,8 +43,8 @@ namespace FirstAid
                 currentViewId = Resource.Layout.layout_confirmation;
                 SetContentView(Resource.Layout.layout_confirmation); //Methode SetContentView bildet das gewünschte Layout auf dem Bildschirm ab
 
-                FindViewById<Button>(Resource.Id.ConfirmationButton).Click += ClickedConfirmation; //übergebe referenz. Pointer auf Mehtode wird dazu gepackt. Button führt Liste. Button kann mehrere Methoden aufrufen. = wäre das ersetzen der Click Methode
-                FindViewById<Button>(Resource.Id.ConfirmationQuestionButton).Click += ClickedHelp;
+                FindViewById<Button>(Resource.Id.ConfirmationButton).Click += ClickedConfirmation; //übergebe referenz. Pointer auf Methode wird dazu gepackt. Button führt Liste. Button kann mehrere Methoden aufrufen. = wäre das ersetzen der Click Methode
+                FindViewById<TextView>(Resource.Id.confirmationText).Click += ClickedHelp;
             }
         }
 
@@ -57,7 +57,7 @@ namespace FirstAid
 
                 FindViewById<Button>(Resource.Id.YesButton).Click += ClickedYes;
                 FindViewById<Button>(Resource.Id.NoButton).Click += ClickedNo;
-                FindViewById<Button>(Resource.Id.QueryQuestionButton).Click += ClickedHelp;
+                FindViewById<TextView>(Resource.Id.queryText).Click += ClickedHelp;
 
             }
         }
@@ -69,8 +69,8 @@ namespace FirstAid
                 currentViewId = Resource.Layout.layout_end;
                 SetContentView(Resource.Layout.layout_end);
 
-                FindViewById<Button>(Resource.Id.BackToStartButton).Click += ClickedBackToStart; 
-
+                FindViewById<TextView>(Resource.Id.endText).Click += ClickedHelp;
+                FindViewById<Button>(Resource.Id.BackToStartButton).Click += ClickedBackToStart;
             }
         }
 
@@ -82,6 +82,7 @@ namespace FirstAid
                 SetContentView(Resource.Layout.layout_help);
 
                 FindViewById<Button>(Resource.Id.BackButton).Click += ClickedBack;
+                FindViewById<TextView>(Resource.Id.HelpText).Click += ClickedBack;
             }
         }
 
@@ -138,7 +139,7 @@ namespace FirstAid
             else if (page.pageType == PageTypeEnum.end)
             {
                 SetContentViewToEnd();
-                FindViewById<TextView>(Resource.Id.queryText).Text = page.text;
+                FindViewById<TextView>(Resource.Id.endText).Text = page.text;
             }
 
             else
