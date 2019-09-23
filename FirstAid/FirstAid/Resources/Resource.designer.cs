@@ -1453,26 +1453,8 @@ namespace FirstAid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0d003e
-			public const int BackButton = 2131558462;
-			
-			// aapt resource value: 0x7f0d003b
-			public const int BackToStartButton = 2131558459;
-			
-			// aapt resource value: 0x7f0d0039
-			public const int ConfirmationButton = 2131558457;
-			
-			// aapt resource value: 0x7f0d003d
-			public const int HelpText = 2131558461;
-			
-			// aapt resource value: 0x7f0d0041
-			public const int NoButton = 2131558465;
-			
 			// aapt resource value: 0x7f0d003c
 			public const int SCROLLER_ID = 2131558460;
-			
-			// aapt resource value: 0x7f0d0040
-			public const int YesButton = 2131558464;
 			
 			// aapt resource value: 0x7f0d0048
 			public const int action0 = 2131558472;
@@ -1503,6 +1485,12 @@ namespace FirstAid
 			
 			// aapt resource value: 0x7f0d0026
 			public const int async = 2131558438;
+			
+			// aapt resource value: 0x7f0d003e
+			public const int backButton = 2131558462;
+			
+			// aapt resource value: 0x7f0d003b
+			public const int backToStartButton = 2131558459;
 			
 			// aapt resource value: 0x7f0d0027
 			public const int blocking = 2131558439;
@@ -1539,6 +1527,9 @@ namespace FirstAid
 			
 			// aapt resource value: 0x7f0d0035
 			public const int configView = 2131558453;
+			
+			// aapt resource value: 0x7f0d0039
+			public const int confirmationButton = 2131558457;
 			
 			// aapt resource value: 0x7f0d0038
 			public const int confirmationText = 2131558456;
@@ -1579,6 +1570,9 @@ namespace FirstAid
 			// aapt resource value: 0x7f0d0012
 			public const int height = 2131558418;
 			
+			// aapt resource value: 0x7f0d003d
+			public const int helpText = 2131558461;
+			
 			// aapt resource value: 0x7f0d0053
 			public const int icon = 2131558483;
 			
@@ -1614,6 +1608,9 @@ namespace FirstAid
 			
 			// aapt resource value: 0x7f0d0077
 			public const int nested_icon = 2131558519;
+			
+			// aapt resource value: 0x7f0d0041
+			public const int noButton = 2131558465;
 			
 			// aapt resource value: 0x7f0d0013
 			public const int none = 2131558419;
@@ -1818,6 +1815,9 @@ namespace FirstAid
 			
 			// aapt resource value: 0x7f0d0002
 			public const int ws_navigation_drawer_view_pager = 2131558402;
+			
+			// aapt resource value: 0x7f0d0040
+			public const int yesButton = 2131558464;
 			
 			static Id()
 			{

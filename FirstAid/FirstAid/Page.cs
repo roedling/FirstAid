@@ -7,13 +7,13 @@ namespace FirstAid
 { 
 
 //Enum ist eine Reihe von Nummern, welche wir aber beliebig benennen können.
-public enum PageTypeEnum { query, confirmation, end }
+public enum PageType { Query, Confirmation, End }
 
     public class Page
     {
         public string text { get; set; }
         public string helpText { get; set; }
-        public PageTypeEnum pageType { get; set; }
+        public PageType pageType { get; set; }
         public int nextIfYes { get; set; }
         public int nextIfNo { get; set; }
         public int nextIfConfirm { get; set; }

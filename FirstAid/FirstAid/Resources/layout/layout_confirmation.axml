@@ -4,7 +4,7 @@
     xmlns:app            ="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width ="match_parent"
-    android:padding      ="15dp" >
+    android:padding      ="15dp">
     <FrameLayout
         android:layout_width ="match_parent"
         android:layout_height="match_parent"
@@ -18,9 +18,9 @@
             android:text         ="Erste-Hilfe starten"
             android:textColor    ="@color/white"
             android:textSize     ="25dp"
-            android:clickable="true"/>
+            android:clickable    ="true" />
         <Button
-            android:id            ="@+id/ConfirmationButton"
+            android:id            ="@+id/confirmationButton"
             android:text          ="Bestätigen"
             android:background    ="#ff206abe"
             android:layout_gravity="bottom|center"
@@ -41,9 +41,5 @@ Define layouts on Wear:
 https://developer.android.com/training/wearables/ui/layouts
 
 
-
-
-gelöscht:
-app:boxedEdges       ="all"
 
 -->
