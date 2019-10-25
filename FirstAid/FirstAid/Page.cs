@@ -11,11 +11,13 @@ public enum PageType { Query, Confirmation, End }
 
     public class Page
     {
-        public string text { get; set; }
-        public string helpText { get; set; }
-        public PageType pageType { get; set; }
-        public int nextIfYes { get; set; }
-        public int nextIfNo { get; set; }
-        public int nextIfConfirm { get; set; }
+        public string Text { get; set; }
+        public string HelpText { get; set; }
+        public PageType PageType { get; set; }
+        public int NextIfYes { get; set; }
+        public int NextIfNo { get; set; }
+        public int NextIfConfirm { get; set; }
     }
 }
+
+

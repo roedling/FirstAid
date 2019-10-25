@@ -15,7 +15,7 @@
             android:paddingTop   ="10dp"
             android:layout_height="wrap_content"
             android:layout_width ="match_parent"
-            android:text         ="Erste-Hilfe starten"
+            android:text         ="Erste-Hilfe"
             android:textColor    ="@color/white"
             android:textSize     ="25dp"
             android:clickable    ="true" />

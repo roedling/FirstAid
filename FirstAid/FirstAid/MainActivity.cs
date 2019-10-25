@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -105,7 +104,7 @@ namespace FirstAid
         {
             currentPage = book.GetCurrentPage(); //Aktuelle Abfrageseite speichern
             SetContentViewToHelp(); //Bildschirm auf das Layout für den Hilfetext stellen
-            FindViewById<TextView>(Resource.Id.helpText).Text = currentPage.helpText; //Hilfetext der aktuellen Seite aufrufen
+            FindViewById<TextView>(Resource.Id.helpText).Text = currentPage.HelpText; //Hilfetext der aktuellen Seite aufrufen
         }
 
         void ClickedBack(object Button, EventArgs a)
@@ -124,22 +123,22 @@ namespace FirstAid
 
         void ShowPage(Page page)
         {
-            if(page.pageType == PageType.Confirmation)
+            if(page.PageType == PageType.Confirmation)
             {
                 SetContentViewToConfirmation();
-                FindViewById<TextView>(Resource.Id.confirmationText).Text = page.text;
+                FindViewById<TextView>(Resource.Id.confirmationText).Text = page.Text;
             }
 
-            else if(page.pageType == PageType.Query)
+            else if(page.PageType == PageType.Query)
             {
                 SetContentViewToQuery();
-                FindViewById<TextView>(Resource.Id.queryText).Text = page.text;
+                FindViewById<TextView>(Resource.Id.queryText).Text = page.Text;
             }
 
-            else if (page.pageType == PageType.End)
+            else if (page.PageType == PageType.End)
             {
                 SetContentViewToEnd();
-                FindViewById<TextView>(Resource.Id.endText).Text = page.text;
+                FindViewById<TextView>(Resource.Id.endText).Text = page.Text;
             }
 
             else
